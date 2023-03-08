@@ -1,18 +1,23 @@
 import ItemLista from "../ItemLista"
-import "./ListaIcones.css"
 import iconeUm from "../../Imagens/perfil.svg"
 import iconeDois from "../../Imagens/sacola.svg"
+import styled from "styled-components"
+
+const StyledListaIcones = styled.ul`
+    display: flex;
+    align-items: center;
+`
 
 const ListaIcones = () => {
 
     const icones = [iconeUm, iconeDois]
 
     return (
-        <ul className="lista-icones">
+        <StyledListaIcones>
             {icones.map( icone => (
                 <ItemLista texto={<img src={icone}></img>}/>
             ) )}
-        </ul>
+        </StyledListaIcones>
     )
 }
 
