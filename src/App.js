@@ -2,6 +2,7 @@ import './App.css';
 import Lista from './Componentes/Lista';
 import ListaIcones from './Componentes/ListaIcones';
 import Logo from "./Componentes/Logo"
+import Pesquisa from "./Componentes/Pesquisa"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Lista></Lista>
         <ListaIcones />
       </header>
+      <Pesquisa placeholder="Ex : O Pequeno príncipe"/>
     </div>
   );
 }
