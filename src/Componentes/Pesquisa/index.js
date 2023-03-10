@@ -25,11 +25,26 @@ const SubTitulo = styled.h3`
     margin-bottom: 40px;
 `
 
+const LivroPesquisado = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    p {
+        width: 200px;
+    }
+    img {
+        width: 100px;
+    }
+    &:hover {
+        border: 1px solid white;
+    s}
+`
+
 const Pesquisa = () => {
 
     const [livroPesquisado, setLivroPesquisado] = useState("")
-
-    console.log(livroPesquisado);
 
     return (
         <ContainerPesquisa>
@@ -39,6 +54,14 @@ const Pesquisa = () => {
                 const resultadoPesquisa = livros.filter(livro => livro.nome.includes(e.target.value))
                 setLivroPesquisado(resultadoPesquisa)
             }}/>
+
+            {livroPesquisado.map( livro => (
+                <LivroPesquisado>
+                    <p>{livro.nome}</p>
+                    <img src={livro.src} />
+                </LivroPesquisado>
+            ) )}
+
         </ContainerPesquisa>
     )
 }
