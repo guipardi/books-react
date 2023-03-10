@@ -1,20 +1,20 @@
-import './App.css';
-import Lista from './Componentes/Lista';
-import ListaIcones from './Componentes/ListaIcones';
-import Logo from "./Componentes/Logo"
-import Pesquisa from "./Componentes/Pesquisa"
+import Header from './componentes/Header'
+import Pesquisa from './componentes/Pesquisa'
+import styled from 'styled-components'
+
+const AppContainer = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(90deg,#002F52 35%,#326589 165%);
+`
 
 function App() {
   return (
-    <div className='app'>
-      <header>
-        <Logo></Logo>
-        <Lista></Lista>
-        <ListaIcones />
-      </header>
-      <Pesquisa placeholder="Ex : O Pequeno príncipe"/>
-    </div>
+    <AppContainer>
+      <Header />
+      <Pesquisa />
+    </AppContainer>
   );
 }
 
-export default App;
+export default App
